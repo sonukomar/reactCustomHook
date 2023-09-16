@@ -36,3 +36,129 @@
     transform: rotate(360deg);
   }
 }
+
+.status {
+  margin: auto 2em;
+}
+
+.comments {
+  padding: 2.2em;
+  border-radius: 1em;
+}
+
+.comment {
+  margin-bottom: 1em;
+}
+
+.commentHeader {
+  padding: 3em;
+  border-radius: 0.5em;
+  box-shadow: -1px 4px 6px 4px #c9d3de;
+}
+q {
+  font-family: emoji;
+  font-size: 4em;
+  color: #6a6565;
+  animation: fade 3s steps(95, end);
+}
+q p {
+  font-size: 0.5em;
+  text-align: center;
+  color: #999999;
+  margin-top: -93px;
+  padding: 1em;
+  margin-left: -0.9em;
+}
+
+q::before {
+  content: open-quote;
+  color: rgb(221 221 221);
+  font-size: 2em;
+}
+q::after {
+  content: close-quote;
+  color: rgb(221 221 221);
+  float: right;
+  font-size: 2em;
+  margin-top: -23px;
+}
+.author {
+  float: right;
+  margin-top: 3em;
+}
+
+.hidden {
+  display: none;
+}
+
+.controls {
+  display: flex;
+  margin-left: 50%;
+  margin-top: 2em;
+}
+button {
+  font-size: xx-large;
+  background: #fff0;
+  margin: 0.3em;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale3d(1.3, 1.3, 1.3);
+}
+
+.commentHeader h1 {
+  color: #afafaf;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.1em; /* Adjust as needed */
+  /* animation: typing 10.5s steps(95, end), blink-caret 0.35s step-end infinite; */
+  animation: fade 3s steps(95, end);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 100;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+h4 {
+  box-shadow: 4px 4px 6px -2px rgb(225 205 205);
+  width: 4em;
+  padding: 1em;
+}
